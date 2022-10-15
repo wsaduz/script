@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Угадай число <br>
+    <input type="number" id="number"> 
+    <button onclick="getInfo()">Отправить</button>
+
+    <script>
+        var random = Math.floor( Math.random(15) * 100);
+        var javob = 0;
+        console.log(random)
+        function getInfo() {
+            javob = javob + 1;
+            var form = document.getElementById("number").value;
+            if(form == random) {
+                alert("ДАААА ТЫ ПРАВ")
+                alert("Ты нашел ответ с " + javob + " попыток")
+            }
+            if(form > random) {
+                alert("ЧИСЛО ТВОЁ БОЛЬШЕ!")
+            }
+            if(form < random) {
+                alert("ЧИСЛО ТВОЁ МЕНЬШЕ")
+            }
+        }
+    </script>
+</body>
+</html>
